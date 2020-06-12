@@ -1,9 +1,9 @@
-# Sanity Clean Content Studio
+# Sanity Studio for Carton Co.
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+## Introduction
 
-Now you can do the following things:
+This Sanity studio is a companion to the Sanity Content Modeling Guide.
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+## Premise
+
+**Carton Co.** manufactures storage cartons and storage boxes. They have multiple offices and warehouse locations and sell their products through several different regional markets. They also produce a product catalog that manifests in print, and as a searchable online resource.
