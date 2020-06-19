@@ -2,7 +2,6 @@ export default {
   title: 'Product',
   name: 'product',
   type: 'document',
-  fieldsets: [{name: 'attributes', title: 'Attributes',}],
   fields: [
     {
       title: 'Title',
@@ -15,39 +14,22 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
+        maxLength: 96,
         auto: true
       }
     },
     {
-      title: 'Product ID',
-      name: 'id',
-      type: 'slug',
-    },
-    {
-      title: 'Main Image',
-      name: 'mainImage',
-      type: 'image',
-    },
-    {
-      title: 'Additional images',
-      name: 'productImages',
+      title: 'Categories',
+      name: 'category',
       type: 'array',
       of: [
         {
-          type: 'image',
+          type: 'reference',
+          to: [
+            {type: 'category'},
+          ]
         }
       ]
-    },
-    {
-      title: 'Active?',
-      name: 'active',
-      type: 'boolean',
-    },
-    {
-      title: 'Price',
-      name: 'price',
-      type: 'number',
-      validation: Rule => Rule.positive().precision(2)
     },
     {
       title: 'Summary',
@@ -60,53 +42,31 @@ export default {
       type: 'portableText',
     },
     {
-      title: 'Board type',
-      name: 'boardType',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Box board', value: 'box'},
-          {title: 'Corrigated: single face', value: 'singleFace'},
-          {title: 'Corrigated: single wall', value: 'singleWall'},
-          {title: 'Corrigated: double wall', value: 'doubleWall'},
-          {title: 'Corrigated: triple wall', value: 'tripleWall'},
-        ]
-      }
+      title: 'Default variation',
+      name: 'defaultProductVariant',
+      type: 'productVariant'
     },
     {
-      title: 'Inside Length (cm)',
-      name: 'insideLength',
-      type: 'number',
-      fieldset: 'attributes',
-      validation: Rule => Rule.positive().precision(1)
+      title: 'Other variations',
+      name: 'variants',
+      type: 'array',
+      of: [
+        {
+          title: 'Variant',
+          type: 'productVariant'
+        }
+      ]
     },
     {
-      title: 'Inside Width (cm)',
-      name: 'insideWidth',
-      type: 'number',
-      fieldset: 'attributes',
-      validation: Rule => Rule.positive().precision(1)
-    },
-    {
-      title: 'Inside height (cm)',
-      name: 'insideHeight',
-      type: 'number',
-      fieldset: 'attributes',
-      validation: Rule => Rule.positive().precision(1)
-    },
-    {
-      title: 'Product weight (gm)',
-      name: 'productWeight',
-      type: 'number',
-      fieldset: 'attributes',
-      validation: Rule => Rule.positive()
-    },
-    {
-      title: 'Holding weight capacity (kg)',
-      name: 'holdingWeight',
-      type: 'number',
-      fieldset: 'attributes',
-      validation: Rule => Rule.positive().precision(1)
+      title: 'Other variations 2',
+      name: 'variants2',
+      type: 'array',
+      of: [
+        {
+          title: 'Variant',
+          type: 'productVar'
+        }
+      ]
     },
     {
       title: 'Features',

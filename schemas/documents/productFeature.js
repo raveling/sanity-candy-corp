@@ -14,6 +14,7 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
+        maxLength: 96,
         auto: true
       }
     },
@@ -29,8 +30,9 @@ export default {
       options: {
         list: [
           {title: 'General', value: 'general'},
-          {title: 'Safety', value: 'safety'},
-          {title: 'Shipping', value: 'shipping'},
+          {title: 'Health', value: 'health'},
+          {title: 'Warning', value: 'warning'},
+          {title: 'Promotion', value: 'promotion'},
         ]
       }
     }

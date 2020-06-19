@@ -13,5 +13,21 @@ export default {
       name: 'description',
       type: 'text',
     },
+    {
+      title: 'Department Head',
+      name: 'departmentHead',
+      type: 'reference',
+      to: [
+        {type: 'person'},
+      ]
+    },
+    {
+      title: 'Parent Department',
+      name: 'parentDepartment',
+      type: 'reference',
+      to: [
+        {type: 'department'},
+      ]
+    }
   ]
 }

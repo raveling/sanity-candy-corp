@@ -1,6 +1,6 @@
 export default {
-  title: 'Article',
-  name: 'article',
+  title: 'Newsletter',
+  name: 'newsletter',
   type: 'document',
   fields: [
     {
@@ -21,6 +21,14 @@ export default {
       title: 'Publication date',
       name: 'publishDate',
       type: 'datetime',
+    },
+    {
+      title: 'Subscription issue',
+      name: 'relatedItems',
+      type: 'reference',
+      to: [
+        {type: 'subscriptionIssue'},
+      ]
     },
     {
       title: 'SEO',
@@ -44,20 +52,6 @@ export default {
       title: 'Content',
       name: 'content',
       type: 'portableText',
-    },
-    {
-      title: 'Related Items',
-      name: 'relatedItems',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [
-            {type: 'article'},
-            {type: 'product'},
-          ]
-        }
-      ]
     },
   ]
 }

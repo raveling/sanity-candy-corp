@@ -8,10 +8,16 @@ export default {
       name: 'name',
       type: 'string',
     },
+    //
+    // Need to figure out whether or not person contains customers and staff
+    //
     {
       title: 'Role',
       name: 'role',
-      type: 'string',
+      type: 'reference',
+      to: [
+        {type: 'role'},
+      ]
     },
     {
       title: 'Department',

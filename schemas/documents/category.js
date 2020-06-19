@@ -18,30 +18,14 @@ export default {
       }
     },
     {
-      title: 'Hidden?',
-      name: 'hidden',
-      type: 'boolean',
+      title: 'Image',
+      name: 'image',
+      type: 'image',
+      options: {hotspot: true},
     },
     {
-      title: 'SEO',
-      name: 'seo',
-      type: 'seo',
-    },
-    {
-      title: 'Availability',
-      name: 'availability',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Article', value: 'article'},
-          {title: 'Product', value: 'product'}
-        ]
-      }
-    },
-    {
-      title: 'Content',
-      name: 'content',
+      title: 'Description',
+      name: 'description',
       type: 'portableText',
     }
   ]
